@@ -1,0 +1,21 @@
+{
+    "name": "corte-3",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "corte-3": "file:",
+        "dotenv": "^16.5.0",
+        "express": "^5.1.0",
+        "hbs": "^4.2.0",
+        "mysql": "^2.18.1",
+        "nodemon": "^3.1.10"
+    }
+}
