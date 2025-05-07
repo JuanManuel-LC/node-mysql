@@ -11,6 +11,18 @@ const publicDirectory = path.join(__dirname, "./public");
 // Le decimos a node que utilice los recursos estáticos de la carpeta public
 app.use(express.static(publicDirectory));
 
+/**
+ * Aqui indicamos que podemos trabajar con los datos de
+ * cualquier formulario dentro de nuestra app
+ */
+app.use(express.urlencoded({ extended: false }));
+
+/**
+ * Aqui indicamos que los valores que obtenemis en nuestro forms,
+ * vienen como objetos JSON (Parte Json Bodies as sent by API Clients)
+ */
+app.use(express.json());
+
 // Variables de entorno con dotenv
 // Le indicamos a dotenv en donde esta el archivo de nuestras variables de entorno
 dotenv.config({ path: "./.env" });
@@ -34,15 +46,10 @@ db.connect((error) => {
 // View de HBS (Handle bars), esto para crear vistas (paginas)
 app.set("view engine", "hbs");
 
-// app.get("/", (req, res) => {
-//     res.send("<h1> Mi nueva APP en Node JS </h1>");
-// });
+// Definimos nuestras rutas
+app.use("/", require("./routes/pages"));
 
-app.get("/", (req, res) => {
-    // res.sendFile(path.join(__dirname, "index.html"));
-    // Solo utiliza la carpeta de views para rendierizar, por eso no ultiliza el html
-    res.render("index");
-});
+app.use("/auth", require("./routes/auth"));
 
 app.listen(5000, () => {
     console.log("Servidor iniciado en el puerto 5000");

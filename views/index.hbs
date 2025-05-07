@@ -7,5 +7,39 @@
     </head>
     <body>
         <h1>Hola mundo</h1>
+        <a href="/login">Ir al login page</a>
+
+        <form action="/auth/login" method="post">
+            <label for="name">Name:</label><br />
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="John"
+                required
+            /><br />
+
+            <label for="email">Email:</label><br />
+            <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="john@email.com"
+                required
+            /><br />
+
+            <label for="password">Password:</label><br />
+            <input
+                type="password"
+                id="pass"
+                name="password"
+                placeholder="password"
+                minlength="8"
+                required
+            /><br />
+
+            <br />
+            <input type="submit" value="Login/Ingresar" />
+        </form>
     </body>
 </html>
