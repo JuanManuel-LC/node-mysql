@@ -34,12 +34,16 @@
                 id="pass"
                 name="password"
                 placeholder="password"
-                minlength="8"
+                minlength=""
                 required
             /><br />
 
             <br />
             <input type="submit" value="Login/Ingresar" />
+
+            {{#if message}}
+                <h3>Este es el mensaje: {{message}}</h3>
+            {{/if}}
         </form>
     </body>
 </html>
