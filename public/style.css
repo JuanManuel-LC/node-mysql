@@ -204,6 +204,17 @@ body {
 
 /* Conoce los dias Itaú */
 
+.dias-itau-titulo {
+    color: #5f5f5f;
+    margin: 50px 0 30px 130px;
+}
+
+.dias-itau-texto {
+    margin-left: 130px;
+    font-size: 20px;
+    margin-bottom: 70px;
+}
+
 .tarjetas-container {
     display: flex;
     justify-content: center;
@@ -267,4 +278,147 @@ footer li a {
     display: flex;
     flex-direction: column;
     padding: 40px 410px 0;
+}
+
+@media (min-width: 300px) and (max-width: 991px) {
+    body {
+        padding-top: 110px !important;
+    }
+    .top-bar-respons {
+        height: 40px !important;
+    }
+    .grupo-derecha-topbar {
+        display: none !important;
+    }
+
+    .main-navbar-respons {
+        height: 70px !important;
+    }
+
+    .logo {
+        height: 40px;
+        width: 50px;
+        margin-left: 0;
+    }
+
+    /* background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 1),
+            rgba(255, 255, 255, 0)
+        ),
+        url(img/2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    height: 500px;
+    position: relative;
+    z-index: 1; */
+
+    .hero-section {
+        padding: 150px 26px 26px 15px;
+        background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 1),
+                rgba(255, 255, 255, 0)
+            ),
+            url(img/2.png);
+
+        background-position: 81%;
+        height: 600px;
+        background-size: cover;
+    }
+
+    .hero-text {
+        padding: 0;
+    }
+
+    .right-button,
+    .left-button {
+        display: none;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .leer-mas {
+        width: auto !important;
+    }
+
+    .container-form {
+        display: flex;
+        width: 1000px !important;
+        justify-content: center;
+    }
+
+    .imagen-form {
+        display: none;
+    }
+
+    .un-siglo-container h2 {
+        font-size: 22px;
+    }
+
+    .un-siglo-container p {
+        font-size: 16px;
+    }
+
+    .un-siglo-container h6 {
+        font-size: 22px;
+    }
+
+    .imagen-un-siglo {
+        width: 410px;
+    }
+
+    .seccion-container {
+        padding-left: 20px;
+        width: 400px;
+        gap: 40px !important;
+    }
+
+    .seccion {
+        flex-direction: column;
+        width: auto;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .seccion h6 {
+        font-size: 18px;
+    }
+
+    .dias-itau-titulo {
+        margin: 10px;
+    }
+
+    .dias-itau-texto {
+        margin: 20px 0 30px 10px !important;
+    }
+
+    .carusel-elemento {
+        margin-bottom: 50px;
+    }
+
+    .medios-container h2 {
+        font-size: 22px;
+        padding-left: 10px;
+    }
+
+    .medios-container p {
+        padding-left: 10px;
+    }
+
+    .texto-medios {
+        padding: 20px 40px;
+    }
 }
