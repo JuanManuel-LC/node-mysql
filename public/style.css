@@ -389,6 +389,7 @@ footer li a {
     .seccion {
         flex-direction: column;
         width: auto;
+        height: 200px;
         gap: 20px;
         margin-bottom: 30px;
     }
