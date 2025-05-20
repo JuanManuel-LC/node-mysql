@@ -1,3 +1,270 @@
-/* body {
-    background-color: blueviolet;
+body {
+    padding-top: 100px;
+    font-family: "Arial", sans-serif;
+}
+.top-bar {
+    justify-content: center;
+    background-color: #f2f2f2;
+    font-size: 0.9rem;
+    height: 50px;
+}
+
+.top-bar a {
+    color: #000;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.people {
+    background-color: #ff6a00;
+    height: 70px;
+    padding: 0 20px;
+    color: #f2f2f2;
+}
+
+.people i {
+    color: #f2f2f2;
+}
+
+.line {
+    background-color: rgb(200, 200, 200);
+    width: 2px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.main-navbar {
+    background-color: #ff6a00;
+    font-weight: bold;
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: 135px;
+    background-color: #f2f2f2;
+    color: #ff6a00;
+}
+.main-navbar .navbar-brand img {
+    height: 40px;
+}
+.main-navbar .nav-link {
+    color: white !important;
+    font-weight: 500;
+}
+
+/* .buttons {
+    display: flex;
+    justify-content: center;
 } */
+
+.btn1 {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 12px 20px 12px 0;
+}
+
+.btn2 {
+    background-color: white;
+    color: #ff6a00;
+    padding: 12px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.line-main-bar {
+    width: 1px;
+    height: 50px;
+    background-color: #f2f2f2;
+    margin: 0 50px;
+}
+
+.hero-section {
+    background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 1),
+            rgba(255, 255, 255, 0)
+        ),
+        url(img/2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    height: 500px;
+    position: relative;
+    z-index: 1;
+}
+
+.left-button,
+.right-button {
+    text-align: center;
+    width: 50px;
+    background-color: #ff6a00;
+    border-radius: 5px;
+    width: 40px;
+}
+
+.hero-text {
+    width: 1030px;
+    text-align: left;
+    padding-right: 300px;
+}
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.hero-text p {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 40px;
+}
+.hero-text .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff6a00;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    width: 200px;
+    height: 50px;
+}
+.quick-links {
+    background-color: #fff;
+    padding: 2rem 0;
+}
+
+.container-cards {
+    position: relative;
+    margin-top: -85px;
+    z-index: 10;
+    gap: 2px;
+}
+
+.cont-card {
+    width: 180px;
+    display: flex;
+    justify-content: center;
+}
+.quick-links .card {
+    display: flex;
+    justify-content: flex-start;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 140px;
+    text-align: left;
+    font-weight: bold;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 80px;
+}
+
+.quick-links .card i {
+    margin-bottom: 15px;
+    font-size: 2rem;
+    color: #ff6a00;
+}
+
+/* Formulario */
+.input {
+    padding-left: 20px;
+}
+
+.input::placeholder {
+    color: #909090;
+}
+
+/* Tarjetas de un Siglo */
+
+.seccion {
+    display: flex;
+    background-color: #eeeeee;
+    height: 148px;
+    gap: 50px;
+}
+
+.seccion h6 {
+    font-size: 25px;
+}
+
+.seccion p {
+    font-size: 16px;
+}
+
+/* Conoce los dias Itaú */
+
+.tarjetas-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contenido-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contenido-card h5 {
+    font-size: 18px;
+}
+
+.boton-card {
+    margin-top: 50px;
+    background-color: #ff6a00;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.borde-card {
+    border: none;
+    background-color: #f7f4f2;
+}
+
+/* Itaú en los medios*/
+
+.imagen-first img {
+    height: 380px;
+}
+
+.texto-medios h5 {
+    font-size: 22px;
+    margin: 25px 0;
+}
+
+.texto-medios p {
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+footer h6 {
+    margin-bottom: 40px;
+}
+
+footer li {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #2b2b2b;
+}
+
+footer li a {
+    color: #d6d0cb;
+}
+
+.contacto-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 410px 0;
+}
