@@ -15,7 +15,14 @@ router.get("/", (req, res) => {
 
 // Renderice la pagina login.hbs
 router.get("/login", (req, res) => {
-    res.render("login");
+    if (!req.session.login) {
+        res.redirect('/');
+    } else {
+        res.render("login");
+        console.log(req.session.login);
+        
+
+    }
 });
 
 module.exports = router;
