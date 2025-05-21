@@ -18,5 +18,23 @@
             </div>
         </div>
 
+        <button id="logoutButton"> Cerrar Sesion</button>
+
+        <script>
+            document.getElementById('logoutButton').addEventListener('click', async () => {
+                try {
+                    const response = await fetch('/auth/logout', {method: 'POST'});
+                    if(response.ok){
+                        window.location.href = '/login'; //Redirige al Login
+                    } else{
+                        alert('Error al cerrar sesión');
+                    }
+                } catch (error){
+                    console.log('Error: ', error);
+                    alert('Error al cerrar sesión');
+                }
+            })
+        </script>
+
     </body>
 </html>

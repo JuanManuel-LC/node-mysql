@@ -15,5 +15,15 @@ router.post("/login", AuthController.login);
  * toda la informacion y los datos que entrega el form
  */
 
+/**
+ * roter.post('/register'AuthController.logout);
+ */
+
+/**
+ * Aqui vamos a llamar a nuestro Controller que
+ * se encarga de cerrar la sesión
+ */
+router.post('/logout', AuthController.logout);
+
 // Exportamos nuestro enrutador para que lo podamos usar en toda la app
 module.exports = router;

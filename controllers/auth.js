@@ -75,3 +75,15 @@ exports.login = (req, res) => {
         }
     );
 };
+
+exports.logout = (req, res) => {
+    console.log("sesion a borrar: ", req.session);
+    req.session.destroy((err) => {
+        if (err) {
+            console.error('Error destroying session: ', err);
+        }
+        res.clearCookie('connect.sid');
+        res.redirect('/'); // Nos redirige hacia el "/" ya que luego de ahi se interpreta el index
+    })
+    
+}
