@@ -1,5 +1,5 @@
 body {
-    padding-top: 100px;
+    padding-top: 130px;
     font-family: "Arial", sans-serif;
 }
 .top-bar {
@@ -38,6 +38,7 @@ body {
     font-weight: bold;
     height: 80px;
 }
+
 
 .logo {
     display: flex;
@@ -84,6 +85,26 @@ body {
     margin: 0 50px;
 }
 
+#logoutButton {
+    padding: 10px 30px;
+    border-style: none;
+    border-radius: 5px;
+    color: #ff6a00;
+    font-weight: bold;
+}
+
+.bienvenida{
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff6a00;
+    color: #f2f2f2;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/* Slider */
 .hero-section {
     background: linear-gradient(
             to right,

@@ -58,7 +58,7 @@ exports.login = (req, res) => {
 
                     // console.log()
 
-                    message = "Bienvenido: ";
+                    message = `Bienvenido a tu portal ${user_name}`;
 
                     console.log(req.session.user);
 
