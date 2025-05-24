@@ -21,7 +21,6 @@ exports.login = (req, res) => {
     //res.send("Form submited")
     // En una funcion no se puede usar un send y un render al mismo tiempo, no funcionará
 
-    const name = req.body.name;
     const email = req.body.email;
     const password = req.body.password;
 
@@ -53,7 +52,7 @@ exports.login = (req, res) => {
                     req.session.user = {
                         id: user_id,
                         name: user_name,
-                        email: user_email
+                        email: user_email,
                     };
 
                     // console.log()
@@ -77,13 +76,57 @@ exports.login = (req, res) => {
 };
 
 exports.logout = (req, res) => {
+    console.log("Cerrar sesion");
+
     console.log("sesion a borrar: ", req.session);
     req.session.destroy((err) => {
         if (err) {
-            console.error('Error destroying session: ', err);
+            console.error("Error destroying session: ", err);
         }
-        res.clearCookie('connect.sid');
-        res.redirect('/'); // Nos redirige hacia el "/" ya que luego de ahi se interpreta el index
-    })
-    
-}
+        res.clearCookie("connect.sid");
+        res.redirect("/"); // Nos redirige hacia el "/" ya que luego de ahi se interpreta el index
+    });
+};
+
+exports.register = (req, res) => {
+    console.log(req.body);
+    const name = req.body.name_register;
+    const email = req.body.email_register;
+    const password = req.body.password_register;
+
+    db.query(
+        "SELECT email FROM users WHERE email = ?",
+        [email],
+        (err, results) => {
+            if (err) {
+                console.log(err);
+                return res.render("index", {
+                    message: "Error de base de datos",
+                });
+            }
+
+            if (results.length > 0) {
+                return res.render("index", {
+                    message: "El correo ya está registrado",
+                });
+            }
+
+            db.query(
+                "INSERT INTO users SET ?",
+                { name, email, password },
+                (err, result) => {
+                    if (err) {
+                        console.log(err);
+                        return res.render("index", {
+                            message: "Error al registrar usuario",
+                        });
+                    }
+
+                    return res.render("index", {
+                        message: "¡Usuario registrado con éxito!",
+                    });
+                }
+            );
+        }
+    );
+};

@@ -25,5 +25,7 @@ router.post("/login", AuthController.login);
  */
 router.post('/logout', AuthController.logout);
 
+router.post('/register', AuthController.register);
+
 // Exportamos nuestro enrutador para que lo podamos usar en toda la app
 module.exports = router;

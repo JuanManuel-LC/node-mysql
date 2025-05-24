@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(253, 210, 176) !important;
+}
+
+.formulario {
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.register a {
+    text-decoration: none;
+}
+
+.ocultar-container {
+    display: none;
+}
+
+.toast {
+    bottom: 80%;
+    right: 40%;
+    z-index: 9999;
+}

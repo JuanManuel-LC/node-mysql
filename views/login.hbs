@@ -1,4 +1,5 @@
 <html lang="es">
+
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,8 +13,9 @@
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
         />
 
-        <link rel="stylesheet" href="/style.css" />
+        <link rel="stylesheet" href="/css/style.css" />
     </head>
+
     <body>
         <div class="fixed-top">
             <!-- Top bar -->
@@ -45,7 +47,8 @@
                     >
                         <div class="line"></div>
                         <i class="bi bi-question-circle text-orange"></i>
-                        <span class="text-muted">Te ayudamos</span></a>
+                        <span class="text-muted">Te ayudamos</span>
+                    </a>
                 </div>
             </div>
 
@@ -65,14 +68,13 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div
-                        class="collapse navbar-collapse "
+                        class="collapse navbar-collapse"
                         style="margin-left:100px;"
                         id="navbarNav"
                     >
                         <ul class="navbar-nav mb-2 mb-lg-0 gap-2">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Beneficios
-                                    Itaú</a>
+                                <a class="nav-link" href="#">Beneficios Itaú</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a
@@ -130,17 +132,17 @@
                         </div>
                     </div>
                 </div>
-                
+
             </nav>
-            
+
         </div>
         <div class="bienvenida">
-                {{#if message}}
-                    <div class="text-center">
-                        {{message}}
-                    </div>
-                {{/if}}
-            </div>
+            {{#if message}}
+                <div class="text-center">
+                    {{message}}
+                </div>
+            {{/if}}
+        </div>
 
         <!-- Hero section -->
         <section class="hero-section">
@@ -200,7 +202,6 @@
                 </div>
             </div>
         </section>
-
 
         <!-- Video centrado debajo -->
         <div class="container my-5">
@@ -867,24 +868,13 @@
             crossorigin="anonymous"
         ></script>
         <script>
-            document.getElementById('logoutButton').addEventListener('click', async () => {
-                try {
-                    const response = await fetch('/auth/logout', {
-                    method: 'POST'
-                });
-
-                if (response.ok) {
-                    // Redirige al Login
-                    window.location.href = '/login';
-                } else {
-                    alert('Error al cerrar sesión');
-                }
-                } catch (error) {
-                    console.log('Error: ', error);
-                    alert('Error al cerrar sesión');
-                }
-            });
+            document.getElementById('logoutButton').addEventListener('click',
+            async () => { try { const response = await fetch('/auth/logout', {
+            method: 'POST' }); if (response.ok) { // Redirige al Login
+            window.location.href = '/login'; } else { alert('Error al cerrarsesión'); } } catch (error) { console.log('Error: ', error);
+            alert('Error al cerrar sesión'); } });
 
         </script>
     </body>
+
 </html>
